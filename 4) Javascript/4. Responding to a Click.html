@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bangers|Poppins" rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #272822;
+        }
+
+
+        .shadow {
+            text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+        }
+
+        #header {
+            font-family: 'Bangers', cursive;
+            font-size: 300%;
+            color: #E6DB74;
+        }
+
+        #topbar-container {
+            margin: 0 auto;
+            width: 100%;
+            height: 100px;
+            background-color: #66D9EF;
+        }
+
+        #topbar {
+            margin: 0 auto;
+            width: 800px;
+            height: 100px;
+            text-align: center;
+            background-color: #66D9EF;
+        }
+
+        #circle {
+            padding-top: 3px;
+            margin: 0 auto;
+            width: 300px;
+            height: 120px;
+            border-radius: 50px;
+            background-color: #A6E22E;
+        }
+
+        .button {
+            font-family: 'Audiowide', cursive;
+            font-size: 125%;
+            background-color: #AE81FF;
+            border: 2px outset #F8F8F0;
+            color: #E6DB74;
+        }
+
+        #coding-area {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: #F8F8F0;
+            margin: 50px auto 0 auto;
+            padding: 10px;
+            width: 600px;
+            height: 500px;
+            border: 8px outset #F92672;
+        }
+
+        #text {
+            font-size: 300%;
+        }
+
+
+    
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div id="topbar-container">
+        <div id="topbar">
+            <div id="circle">
+                    <span class="shadow" id="header">Javascript Lessons!</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="coding-area">
+
+            <h2 id="text">&#x1F431;</h2>
+
+            <button id="myButton" class="button">Click Me!</button> 
+
+
+
+    </div>
+
+    
+     
+</body>
+
+<script type="text/javascript">
+
+    let words = ["&#x1F601;", "&#x1F602;", "&#x1F60A;", "&#x1F612;","&#x1F61C;" ,"&#x1F61D;" ,"&#x1F621;" ,"&#x1F62D;" ,"&#x1F4E21;" , "&#x1F4E1;", "<img style='width: 100px' src='cat.jpg'>"]
+
+    let num = 0
+
+        document.getElementById('myButton').onclick = function() {
+            num = Math.floor(Math.random() * 11) 
+            document.getElementById('text').innerHTML = words[num]
+        }
+
+</script>
+
+</html>

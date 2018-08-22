@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bangers|Carter+One|Poppins" rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #272822;
+        }
+
+        .grad {
+            background: rgb(230,219,116);
+            background: linear-gradient(90deg, rgba(230,219,116,1) 0%, rgba(174,129,255,1) 51%, rgba(102,217,239,1) 100%);
+        }
+
+
+        .shadow {
+            text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+        }
+
+        #header {
+            font-family: 'Bangers', cursive;
+            /* font-family: 'Carter One', cursive; */
+            font-size: 300%;
+            color: #E6DB74;
+        }
+
+        #topbar-container {
+            margin: 0 auto;
+            width: 100%;
+            height: 100px;
+        }
+
+        #topbar {
+            margin: 0 auto;
+            width: 800px;
+            height: 100px;
+            text-align: center;
+        }
+
+        #circle {
+            padding-top: 3px;
+            margin: 0 auto;
+            width: 300px;
+            height: 120px;
+            border-radius: 50px;
+            background-color: #A6E22E;
+        }
+
+        .button {
+            font-family: 'Audiowide', cursive;
+            font-size: 125%;
+            background-color: #AE81FF;
+            border: 2px outset #F8F8F0;
+            color: #E6DB74;
+        }
+
+        #coding-area {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: #F8F8F0;
+            margin: 50px auto 0 auto;
+            padding: 10px;
+            width: 600px;
+            height: 500px;
+            border: 4px outset #F92672;
+        }
+
+
+        .shape {
+            margin: 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: #F8F8F0  inset 2px;
+            float: left;
+    
+        }
+
+        #one {
+            background: rgb(230,219,116);
+background: radial-gradient(circle, rgba(230,219,116,1) 0%, rgba(174,129,255,1) 51%, rgba(102,217,239,1) 100%);
+        }
+
+        #two {
+            background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+        }
+
+        #three {
+            background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+
+        }
+
+        #four {
+            background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+        }
+
+        #five {
+            background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+        }
+
+        #six {
+            background: #F7971E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        #button-div {
+            height: 50px;
+            font-weight: 50px;
+        }
+
+        .crazy {
+            font-weight: bolder;
+            font-size: 50px;
+  color: #e0eff2;
+  text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27
+        }
+
+
+    
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="grad" id="topbar-container">
+        <div id="topbar">
+            <div id="circle">
+                    <span class="shadow" id="header">Javascript Lessons!</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="coding-area">
+
+            <span class="crazy">Disappearing Circles</span>
+
+            <div id="button-div">
+                    <button id="myButton" class="button">Refresh</button>
+                </div>
+
+            <div id="one" class="shape"></div>
+            <div id="two" class="shape"></div>
+            <div id="three" class="shape"></div>
+            <div id="four" class="shape"></div>
+            <div id="five" class="shape"></div>
+            <div id="six" class="shape"></div>
+
+            <p></p>
+            <br>
+            <br>
+
+
+
+            
+
+    </div>
+        
+     
+</body>
+
+<script type="text/javascript">
+
+        document.getElementById('myButton').onclick = function() {
+            location.reload()
+        }
+
+        document.getElementById('one').onclick = function() {
+            document.getElementById('one').style.display = "none";
+        }
+
+        document.getElementById('two').onclick = function() {
+            document.getElementById('two').style.display = "none";
+        }
+
+        document.getElementById('three').onclick = function() {
+            document.getElementById('three').style.display = "none";
+        }
+
+        document.getElementById('four').onclick = function() {
+            document.getElementById('four').style.display = "none";
+        }
+
+        document.getElementById('five').onclick = function() {
+            document.getElementById('five').style.display = "none";
+        }
+
+        document.getElementById('six').onclick = function() {
+            document.getElementById('six').style.display = "none";
+        }
+
+
+</script>
+
+</html>

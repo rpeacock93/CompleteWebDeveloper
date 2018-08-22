@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bangers|Carter+One|Poppins" rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #272822;
+        }
+
+        .grad {
+            background: rgb(230,219,116);
+            background: linear-gradient(90deg, rgba(230,219,116,1) 0%, rgba(174,129,255,1) 51%, rgba(102,217,239,1) 100%);
+        }
+
+
+        .shadow {
+            text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+        }
+
+        #header {
+            font-family: 'Bangers', cursive;
+            /* font-family: 'Carter One', cursive; */
+            font-size: 300%;
+            color: #E6DB74;
+        }
+
+        #topbar-container {
+            margin: 0 auto;
+            width: 100%;
+            height: 100px;
+        }
+
+        #topbar {
+            margin: 0 auto;
+            width: 800px;
+            height: 100px;
+            text-align: center;
+        }
+
+        #circle {
+            padding-top: 3px;
+            margin: 0 auto;
+            width: 300px;
+            height: 120px;
+            border-radius: 50px;
+            background-color: #A6E22E;
+        }
+
+        .button {
+            font-family: 'Audiowide', cursive;
+            font-size: 125%;
+            background-color: #AE81FF;
+            border: 2px outset #F8F8F0;
+            color: #E6DB74;
+        }
+
+        #coding-area {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: #F8F8F0;
+            margin: 50px auto 0 auto;
+            padding: 10px;
+            width: 600px;
+            height: 500px;
+            border: 4px outset #F92672;
+        }
+
+        #text {
+            font-size: 500%;
+        }
+
+        .crazy {
+            font-size: 300%;
+            color: #92a5de;
+             text-shadow:0px 0px 0 rgb(137,156,213),1px 1px 0 rgb(129,148,205),2px 2px 0 rgb(120,139,196),3px 3px 0 rgb(111,130,187),4px 4px 0 rgb(103,122,179),5px 5px 0 rgb(94,113,170),6px 6px 0 rgb(85,104,161),7px 7px 0 rgb(76,95,152),8px 8px 0 rgb(68,87,144),9px 9px 0 rgb(59,78,135),10px 10px 0 rgb(50,69,126),11px 11px 0 rgb(42,61,118),12px 12px 0 rgb(33,52,109),13px 13px 0 rgb(24,43,100),14px 14px 0 rgb(15,34,91),15px 15px 0 rgb(7,26,83),16px 16px 0 rgb(-2,17,74),17px 17px 0 rgb(-11,8,65),18px 18px 0 rgb(-19,0,57),19px 19px 0 rgb(-28,-9,48), 20px 20px 0 rgb(-37,-18,39),21px 21px 20px rgba(0,0,0,1),21px 21px 1px rgba(0,0,0,0.5),0px 0px 20px rgba(0,0,0,.2);
+        }
+
+
+    
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="grad" id="topbar-container">
+        <div id="topbar">
+            <div id="circle">
+                    <span class="shadow" id="header">Javascript Lessons!</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="coding-area">
+
+            <h3 id="secondPara">Style Me? Please</h3>
+
+            <button id="myButton" class="button">StyleText</button> 
+
+            <br>
+
+            <p></p>
+
+            <button id="refresh" class="button">Refresh</button>
+
+            <br>
+
+            <p></p>
+
+            <h3 id="noText"></h3>
+
+            <button id="appear" class="button">Appear</button>
+
+
+
+    </div>
+
+    
+     
+</body>
+
+<script type="text/javascript">
+
+
+        document.getElementById('myButton').onclick = function() {
+            num = Math.floor(Math.random() * 10) 
+            document.getElementById('secondPara').classList.add("crazy")
+        }
+
+        document.getElementById('refresh').onclick = function() {
+            location.reload();
+        }
+
+        document.getElementById('appear').onclick = function() {
+
+            if (document.getElementById('noText').innerHTML == "") {
+                document.getElementById('noText').innerHTML =  "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi praesentium sapiente distinctio cumque corporis earum minus placeat sint voluptates culpa, excepturi accusamus iste, nisi deleniti vel reiciendis quae, repellendus pariatur.</p>"
+
+                document.getElementById('appear').innerHTML = "Disappear"
+            }
+            else {
+                document.getElementById('noText').innerHTML = ""
+
+                document.getElementById('appear').innerHTML = "Reappear"
+            }
+            
+        }
+
+</script>
+
+</html>
