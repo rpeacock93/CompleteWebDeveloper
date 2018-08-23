@@ -1,0 +1,150 @@
+h5 {
+
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+
+#topbar-container {
+    margin: 0 auto;
+    width: 100%;
+    height: 90px;
+    background-color: #C2EAF2;
+}
+
+#topbar {
+    margin: 0 auto;
+    width: 1000px;
+    height: 90px;
+}
+
+#headshot {
+    padding-top: 5px;
+    width: 75px;
+    float: left;
+    border-radius: 50%;
+}
+
+
+#title {
+    float: left;
+    font-size: 50px;
+    padding-top: 5px;
+    padding-left: 45px;
+    /* font-weight: bolder; */
+    color: white;
+    font-family: 'Patua One', cursive;
+}
+
+#git-logo {
+    margin-top: -22px;
+    float: right;
+    width: 130px;
+
+}
+
+.outline {
+    color: black;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+.drop-shadow { 
+    text-shadow:
+      0 1px #808d93,
+      -1px 0 #cdd2d5,
+      -1px 2px #808d93,
+      -2px 1px #cdd2d5,
+      -2px 3px #808d93,
+      -3px 2px #cdd2d5,
+      -3px 4px #808d93,
+      -4px 3px #cdd2d5,
+      -4px 5px #808d93,
+      -5px 4px #cdd2d5,
+      -5px 6px #808d93,
+      -6px 5px #cdd2d5,
+      -6px 7px #808d93,
+      -7px 6px #cdd2d5,
+      -7px 8px #808d93,
+      -8px 7px #cdd2d5;
+}
+
+#menubar-container {
+
+    width: 100%;
+    height: 50px;
+    background-color: #66D9EF; 
+
+}
+
+#menubar {
+
+    margin: 0 auto;
+    width: 900px;
+    height: 50px;
+}
+
+
+#coding-container {
+    width: 900px;
+    height: 700px;
+    margin: 30px auto 0 auto;
+    border: 5px outset #F92672;
+    background-color: #272822;
+    padding: 50px;
+    border-radius: 5%;
+}
+
+#code-title-box {
+    margin: 0 auto;
+    width: 400px;
+    height: 70px;
+    /* background-color: yellowgreen; */
+    text-align: center;
+    
+}
+
+#code-title {
+    color: #E6DB74;
+    font-size: 40px;
+    font-family: 'Hanalei Fill', cursive;
+}
+
+#code-area {
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+    color: #F8F8F0;
+    font-size: 20px;
+    /* font-family: 'Wallpoet', cursive; */
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+.button {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #525448;
+    color: #F92672;
+    border-color: #E6DB74;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
