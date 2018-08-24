@@ -24,6 +24,7 @@ body {
 }
 
 #topbar {
+    text-align: center;
     margin: 0 auto;
     width: 1000px;
     height: 90px;
@@ -40,7 +41,7 @@ body {
 #title {
     float: left;
     font-size: 50px;
-    padding-top: 5px;
+    padding-top: 5px; 
     padding-left: 45px;
     /* font-weight: bolder; */
     color: white;
@@ -48,9 +49,9 @@ body {
 }
 
 #git-logo {
-    margin-top: -22px;
+    margin-top: -8px;
     float: right;
-    width: 130px;
+    width: 100px;
 
 }
 
