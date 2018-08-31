@@ -6,20 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JQuery</title>
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Bangers|Carter+One|Poppins" rel="stylesheet">
-    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
-    
     <style>
         body {
             text-align: center;
             padding: 0;
             background-color: #272822;
             margin: 0;
-        }
-
-        h1 {
-            margin: -30px;
-            padding: 0;
-            font-size: 100px;
         }
 
         h2 {
@@ -126,8 +118,6 @@
             margin: 10px;
             
         }
-
-        #draggable { width: 150px; height: 150px; padding: 0.5em; }
     
     </style>
     
@@ -139,18 +129,17 @@
     <div class="grad" id="topbar-container">
         <div id="topbar">
             <div id="circle">
-                    <span class="shadow" id="header">&lt;JQuery Lesson Time/&gt; &#x1F646;</span>
+                    <span class="shadow" id="header">&lt;JQuery Lesson Time/&gt;</span>
             </div>
         </div>
     </div>
 
     <div id="coding-area">
 
-            <div id="draggable" class="ui-widget-content">
-                    <p>Drag me around</p>
-                    <h1>&#x1F44C;</h1>
-                  </div>
-            
+       <div id="circle2" ></div>
+       <div class="square"></div>
+       <div class="square"></div>
+        
 
     </div>
     <br>
@@ -158,19 +147,25 @@
      
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="jquery-ui/jquery-ui.js"></script>
 <script type="text/javascript" >
-    
 
     document.getElementById("refresh").onclick = function() {
     location.reload();
     }
 
- $( function() {
-    $( "#draggable" ).draggable();
-  } );
+    $("#circle2").click(function() {
+        alert("yo circle clicked")
+    })
 
- 
+    $(".square").click(function() {
+        alert("yo square clicked")
+    })
+
+
+
+
+
+
 
 </script>
 </html>

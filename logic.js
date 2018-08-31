@@ -14,7 +14,7 @@ $("#refresh").click(function() {
     location.reload();
 })
 
-$("#title").hover(function() {
+$("#title").click(function() {
     if($(this).hasClass("drop-shadow")) {
         $(this).removeClass("drop-shadow")
         $(this).addClass("outline")

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery</title>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bangers|Carter+One|Poppins" rel="stylesheet">
+    <style>
+        body {
+            
+            padding: 0;
+            background-color: #272822;
+            margin: 0;
+        }
+
+        h2 {
+
+        }
+
+        h4 {
+
+
+        }
+
+        .grad {
+            background: rgb(230,219,116);
+            background: linear-gradient(90deg, rgba(230,219,116,1) 0%, rgba(174,129,255,1) 51%, rgba(102,217,239,1) 100%);
+        }
+
+
+        .shadow {
+            text-shadow: 0px 3px 0px #b2a98f,
+                0px 14px 10px rgba(0,0,0,0.15),
+                0px 24px 2px rgba(0,0,0,0.1),
+                0px 34px 30px rgba(0,0,0,0.1);
+        }
+
+        #header {
+            font-family: 'Bangers', cursive;
+            /* font-family: 'Carter One', cursive; */
+            font-size: 300%;
+            color: #E6DB74;
+        }
+
+        #topbar-container {
+            margin: 0 auto;
+            width: 100%;
+            height: 100px;
+        }
+
+        #topbar {
+            margin: 0 auto;
+            width: 800px;
+            height: 100px;
+            text-align: center;
+        }
+
+        #circle {
+            padding-top: 5px;
+            margin: 0 auto;
+            width: 300px;
+            height: 105px;
+            border-radius: 50px;
+            background-color: #A6E22E;
+        }
+
+        .button {
+            font-family: 'Audiowide', cursive;
+            font-size: 125%;
+            background-color: #AE81FF;
+            border: 2px outset #F8F8F0;
+            color: #E6DB74;
+            
+        }
+
+        #coding-area {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #F8F8F0;
+            margin: 50px auto 0 auto;
+            padding: 10px;
+            width: 600px;
+            height: 600px;
+            border: 4px outset #F92672;
+            font-size: 130%;
+        }
+
+        .numInput {
+
+            background-color: #272822;
+            color: #FD971F;
+            font-size: 30px;
+            width: 50px;
+            height: 40px;
+            text-align: center;
+        }
+
+        #shape {
+            position: relative; 
+            display: none
+
+        }
+
+        #circle2 {
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            background-color: limegreen;
+            border: 3px outset #F92672;
+            float: left;
+            margin: 10px;
+        }
+
+        .square {
+            width: 175px;
+            height: 175px;
+            background-color: red;
+            float: left;
+            margin: 10px;
+            
+        }
+
+        input {
+            
+            padding: 5px 5px 12px 5px;
+            font-size: 25px;
+            border-radius: 5px;
+            border: 1px solid grey;
+            width: 320px;
+        }
+
+        label {
+            position: relative;
+            top: 12px;
+            width: 200px;
+            float: left;
+        }
+
+
+        .form-element {
+            margin: 10px;
+        }
+
+        #submitButton {
+            width: 130px;
+            margin-left: 200px;
+        }
+
+        #errorMessage {
+            color: #F92672;
+            font-size: 90% !important;
+        }
+
+        #successMessage {
+            color: #A6E22E;
+            font-size: 90% !important;
+            display: none;
+        }
+    
+    </style>
+    
+
+</head>
+
+<body>
+
+    <div class="grad" id="topbar-container">
+        <div id="topbar">
+            <div id="circle">
+                    <span class="shadow" id="header">&lt;JQuery Lesson Time/&gt; &#x1F646;</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="coding-area">
+
+        
+        <div id="errorMessage"></div>
+        <div id="successMessage">"Correct!"</div>
+
+        <div id="first" class="form-element">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="eg.yourname@gmail.com"> 
+        </div>
+        <div class="form-element">
+            <label for="phone">Telephone</label>
+            <input type="text" name="phone" id="phone" placeholder="eg.0123456789">
+        </div>
+        <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+        </div>
+        <div class="form-element">
+                <label for="phone">Confirm Password</label>
+                <input type="password" name="con-password" id="con-password">
+        </div>
+        <div class="form-element">
+                <input type="submit" id="submitButton" value="Sign Up" >
+        </div>
+
+
+
+    </div>
+
+
+    <br>
+    <div style="text-align: center">
+        <button id="refresh" class="button">Refresh</button>
+    </div>
+    
+     
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" >
+
+    document.getElementById("refresh").onclick = function() {
+    location.reload();
+    }
+
+    function isEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
+}
+
+    $("#submitButton").click(function() {
+
+        var errorMessage = ""
+        var fieldMissing = ""
+
+        if($("#email").val() == "") {
+            fieldMissing += "<br>Email"
+        }
+        if($("#phone").val() == "") {
+            fieldMissing += "<br>Phone"
+        }
+        if($("#password").val() == "") {
+            fieldMissing += "<br>Password"
+        }
+        if($("#con-password").val() == "") {
+            fieldMissing += "<br>Confirm Password"
+        }
+
+        if(fieldMissing != "") {
+            errorMessage += "<p>The following field(s) are missing:" + fieldMissing
+        }
+
+        if(isEmail($("#email").val()) == false) {
+            errorMessage += "<p>Your email address is not valid</p>"
+        }
+
+        if($.isNumeric($("#phone").val()) == false) {
+            errorMessage += "<p>Your phone number is not numeric</p>"
+        }
+
+        if($("#password").val() != $("#con-password").val()) {
+            errorMessage += "<p>Your passwords do not match</p>"
+        }
+
+        if(errorMessage != "") {
+            $("#errorMessage").html(errorMessage)
+        } else {
+            $("#successMessage").show()
+            $("#errorMessage").hide()
+
+        }
+
+        
+        
+        
+    })
+
+  
+
+
+
+
+</script>
+</html>

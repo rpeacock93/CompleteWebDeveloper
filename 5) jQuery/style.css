@@ -70,8 +70,8 @@ h4 {
     color: #F8F8F0;
     margin: 50px auto 0 auto;
     padding: 10px;
-    width: 900px;
-    height: 800px;
+    width: 650px;
+    height: 600px;
     border: 4px outset #F92672;
 }
 
@@ -89,4 +89,23 @@ h4 {
     position: relative; 
     display: none
 
+}
+
+#circle2 {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: limegreen;
+    border: 3px outset #F92672;
+    float: left;
+    margin: 10px;
+}
+
+.square {
+    width: 175px;
+    height: 175px;
+    background-color: red;
+    float: left;
+    margin: 10px;
+    
 }
